@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Button } from '@rneui/themed';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { routes } from "../utils/routes";
 import InputName from '../components/inputName';
-import StandarButton from '../components/standarButton';
 
 const PlayerSelectionScreen = () => {
 
@@ -19,14 +19,54 @@ const PlayerSelectionScreen = () => {
 
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>Entrez le nom des joeurs</Text>
-            <View style={styles.buttonContainer}>
+            <Text style={styles.title}>Entrez le nom des joueurs</Text>
+            <ScrollView  style={styles.inputsContainer}>
                 {inputs.map((input, index) => {
                     return <InputName key={index} nbInput={input}/>;
                 })}
+            </ScrollView>
+            <View style={styles.buttonsContainer}>
+                <Button
+                    title="Ajoute un joueur"
+                    icon={{
+                        name: 'user',
+                        type: 'font-awesome',
+                        size: 15,
+                        color: 'white',
+                    }}
+                    iconRight
+                    iconContainerStyle={{ marginLeft: 10 }}
+                    titleStyle={{ fontWeight: '700' }}
+                    buttonStyle={{
+                        backgroundColor: 'rgba(199, 43, 98, 1)',
+                        borderColor: 'transparent',
+                        borderWidth: 0,
+                        borderRadius: 30,
+                    }}
+                    containerStyle={{
+                        width: 200,
+                        marginHorizontal: 50,
+                        marginVertical: 10,
+                    }}
+                    onPress = {() => {setCount(count + 1)}}
+                />
+                <Button
+                    title="Choix du mode"
+                    buttonStyle={{
+                        backgroundColor: 'black',
+                        borderWidth: 2,
+                        borderColor: 'white',
+                        borderRadius: 30,
+                    }}
+                    containerStyle={{
+                        width: 200,
+                        marginHorizontal: 50,
+                        marginVertical: 10,
+                    }}
+                    titleStyle={{ fontWeight: 'bold' }}
+                    onPress = {hundleClick}
+                />
             </View>
-            <StandarButton title={"ajouter des noms"} />
-            <StandarButton title={"Jouez !"} hundleClick={hundleClick}/>
         </View>
     );
 
@@ -39,6 +79,21 @@ const styles = StyleSheet.create({
       flexDirection: 'column',
       alignItems: 'center',
       backgroundColor: '#fff',
+    },
+    title: {
+        top: 50,
+        fontWeight: 'bold', 
+        fontSize: 30,
+    },
+    inputsContainer: {
+        position: 'absolute',
+        top: 150,
+        height: 400,
+        marginHorizontal: 20,
+    },
+    buttonsContainer: {
+        position: 'fixe',
+        bottom: 50,
     },
 })
 

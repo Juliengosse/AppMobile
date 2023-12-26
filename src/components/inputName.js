@@ -5,7 +5,7 @@ const InputName = ({ nbInput }) => {
 
     return(
         <TextInput 
-            value={"Joueur "}
+            placeholder= {`Joueur ${nbInput}`}  
             style={styles.input}
         />
     );
@@ -14,10 +14,13 @@ const InputName = ({ nbInput }) => {
 
 const styles = StyleSheet.create({
     input: {
-      height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
+        height: 40,
+        width: 200,
+        borderColor: 'gray',
+        borderWidth: 1,
+        marginBottom: 16,
+        padding: 8,
+        textAlign: 'center',
     },
 });
 
