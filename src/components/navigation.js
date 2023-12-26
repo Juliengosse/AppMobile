@@ -1,0 +1,50 @@
+import React, { useEffect, useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+//import Orientation from 'react-native-orientation-locker';
+import HomeScreen from '../screens/homeScreen';
+import PlayerSelectionScreen from '../screens/playerSelectionScreen'
+import GameModeScreen from '../screens/gameModeScreen';
+
+
+const Stack = createStackNavigator();
+
+const Navigation = () => {
+
+  //const [orientation, setOrientation] = useState('portrait');
+
+  // const updateOrientation = (test) => {
+
+  //   Orientation.unlockAllOrientations();
+
+  //   if(test === "portrait"){
+  //     Orientation.lockToPortrait();
+  //   }
+
+  //   if(test === "paysage"){
+  //     Orientation.lockToLandscape();
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   updateOrientation(orientation);
+  // }, [orientation]);
+
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+          initialRouteName="HomeScreen"
+          screenOptions={{ 
+            headerLeft: () => null, 
+            headerTitle: () => null, 
+            headerShown: () => false}}>
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="PlayerSelectionScreen" component={PlayerSelectionScreen} />
+        <Stack.Screen name="GameModeScreen" component={GameModeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default Navigation;
