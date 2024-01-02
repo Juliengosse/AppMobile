@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { Button } from '@rneui/themed';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { routes } from "../utils/routes";
+import { Text, Button } from 'react-native-elements';
+import { View, StyleSheet, ScrollView } from 'react-native';
+import { routes } from '../utils/routes';
 import InputName from '../components/inputName';
 
-const PlayerSelectionScreen = () => {
+const PlayerSelectionScreen = ({ navigation } : any) => {
 
     const [count, setCount] = useState(3);
-    const navigation = useNavigation();
 
     const hundleClick = () => {
         navigation.navigate(routes.gameModeScreen);
@@ -92,7 +90,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
     buttonsContainer: {
-        position: 'fixe',
+        position: 'absolute',
         bottom: 50,
     },
 })

@@ -1,7 +1,7 @@
 import { StyleSheet, TextInput } from 'react-native';
 
 
-const InputName = ({ nbInput }) => {
+const InputName = ({ nbInput } : any) => {
 
     return(
         <TextInput 

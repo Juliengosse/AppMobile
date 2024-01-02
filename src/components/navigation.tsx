@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //import Orientation from 'react-native-orientation-locker';
 import HomeScreen from '../screens/homeScreen';
 import PlayerSelectionScreen from '../screens/playerSelectionScreen'
 import GameModeScreen from '../screens/gameModeScreen';
 
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
 
@@ -38,7 +38,7 @@ const Navigation = () => {
           screenOptions={{ 
             headerLeft: () => null, 
             headerTitle: () => null, 
-            headerShown: () => false}}>
+            headerShown: false}}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="PlayerSelectionScreen" component={PlayerSelectionScreen} />
         <Stack.Screen name="GameModeScreen" component={GameModeScreen} />

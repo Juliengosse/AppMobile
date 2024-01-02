@@ -1,6 +1,6 @@
-import { Button } from '@rneui/themed';
+import { Button } from 'react-native-elements';
 
-const ButtonMode = ({ title }) => {
+const ButtonMode = ({ title } : any) => {
 
     return(
         <Button
