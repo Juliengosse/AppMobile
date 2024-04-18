@@ -1,6 +1,10 @@
 import { Button } from 'react-native-elements';
 
-const ButtonMode = ({ title } : any) => {
+const ButtonMode = ({ title, navigation } : any ) => {
+
+    const hundleClick = () => {
+        navigation.navigate("GameScreen", { mode: title });
+    }
 
     return(
         <Button
@@ -15,6 +19,7 @@ const ButtonMode = ({ title } : any) => {
                 width: 150,
                 marginVertical: 10,
             }}
+            onPress={hundleClick}
         />
     );
 }

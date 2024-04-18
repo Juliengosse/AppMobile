@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/homeScreen';
 import PlayerSelectionScreen from '../screens/playerSelectionScreen'
 import GameModeScreen from '../screens/gameModeScreen';
+import GameScreen from '../screens/gameScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -42,6 +43,7 @@ const Navigation = () => {
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="PlayerSelectionScreen" component={PlayerSelectionScreen} />
         <Stack.Screen name="GameModeScreen" component={GameModeScreen} />
+        <Stack.Screen name="GameScreen" component={GameScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -7,7 +7,6 @@ const HomeScreen = ({ navigation } : any) => {
 
     const hundleClick = () => {
         navigation.navigate(routes.playerSelectionScreen);
-        //setOrientation("paysage")
     }
 
 
