@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, FlatList } from 'react-native';
-import { Text, Button } from 'react-native-elements';
-import { addDoc, getDocs, collection, onSnapshot } from "firebase/firestore";
+import React, { useState } from 'react';
+import { addDoc, collection, onSnapshot } from "firebase/firestore";
 import { firestoreDb } from "../../firebaseConfig";
 
 export interface Question{

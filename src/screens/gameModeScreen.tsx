@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import { Text } from 'react-native-elements';
 import ButtonMode from '../components/buttonMode';
 import { styles } from './../utils/style';
+
 
 const GameModeScreen = ({ navigation } : any) => {
 

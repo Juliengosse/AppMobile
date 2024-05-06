@@ -1,5 +1,6 @@
 import { Button } from 'react-native-elements';
 
+
 const ButtonMode = ({ title, navigation } : any ) => {
 
     const hundleClick = () => {
@@ -23,6 +24,5 @@ const ButtonMode = ({ title, navigation } : any ) => {
         />
     );
 }
-
 
 export default ButtonMode;

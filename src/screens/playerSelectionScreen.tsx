@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Text, Button } from 'react-native-elements';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import { routes } from '../utils/routes';
 import InputName from '../components/inputName';
 import { styles } from './../utils/style';
+
 
 const PlayerSelectionScreen = ({ navigation } : any) => {
 
@@ -13,7 +14,6 @@ const PlayerSelectionScreen = ({ navigation } : any) => {
         navigation.navigate(routes.gameModeScreen);
     }
 
-    // Créer un tableau avec le nombre d'éléments équivalent à la valeur de count
     const inputs = Array.from({ length: count }, (_, index) => index + 1);
 
     return(
@@ -68,7 +68,6 @@ const PlayerSelectionScreen = ({ navigation } : any) => {
             </View>
         </View>
     );
-
 }
 
 export default PlayerSelectionScreen;

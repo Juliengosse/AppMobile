@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { routes } from "../utils/routes";
 import { styles } from './../utils/style';
+
 
 const HomeScreen = ({ navigation } : any) => {
 
     const hundleClick = () => {
         navigation.navigate(routes.playerSelectionScreen);
     }
-
 
     return (
         <View style={styles.container}>

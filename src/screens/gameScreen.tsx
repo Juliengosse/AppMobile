@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import { Text } from 'react-native-elements';
 import useData, { Question } from '../hooks/useData';
 import { Button } from 'react-native-elements';
 import { styles } from './../utils/style';
+
 
 const  GameScreen = ({ route } : any) => {
 
@@ -16,20 +17,14 @@ const  GameScreen = ({ route } : any) => {
     started = true;
   }
 
-  useEffect(() => {
-    const fetchData = async () => {
-      await getQuestions();
-      console.log("getQuestions " + questions.length)
-      const filteredQuestions = questions.filter(question => question.gameMode.includes(mode));
-      console.log("filteredQuestions" + filteredQuestions.length)
-      setquestionsForMode(filteredQuestions);
-    };
-  
-    fetchData()
-    console.log("useEffect")
+  const fetchData = async () => {
+    await getQuestions();
+    const filteredQuestions = questions.filter(question => question.gameMode.includes(mode));
+    setquestionsForMode(filteredQuestions);
+  };
 
-    questionsForMode.forEach(q => console.log(q.questionStatement))
-  
+  useEffect(() => {
+    fetchData();
   }, [started]);
 
   return(
