@@ -3,6 +3,7 @@ import { Text, Button } from 'react-native-elements';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { routes } from '../utils/routes';
 import InputName from '../components/inputName';
+import { styles } from './../utils/style';
 
 const PlayerSelectionScreen = ({ navigation } : any) => {
 
@@ -17,7 +18,7 @@ const PlayerSelectionScreen = ({ navigation } : any) => {
 
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>Entrez le nom des joueurs</Text>
+            <Text style={styles.gameModetitle}>Entrez le nom des joueurs</Text>
             <ScrollView  style={styles.inputsContainer}>
                 {inputs.map((input, index) => {
                     return <InputName key={index} nbInput={input}/>;
@@ -69,30 +70,5 @@ const PlayerSelectionScreen = ({ navigation } : any) => {
     );
 
 }
-
-const styles = StyleSheet.create({
-
-    container: {
-      flex: 1,
-      flexDirection: 'column',
-      alignItems: 'center',
-      backgroundColor: '#fff',
-    },
-    title: {
-        top: 50,
-        fontWeight: 'bold', 
-        fontSize: 30,
-    },
-    inputsContainer: {
-        position: 'absolute',
-        top: 150,
-        height: 400,
-        marginHorizontal: 20,
-    },
-    buttonsContainer: {
-        position: 'absolute',
-        bottom: 50,
-    },
-})
 
 export default PlayerSelectionScreen;

@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { Text } from 'react-native-elements';
 import useData, { Question } from '../hooks/useData';
 import { Button } from 'react-native-elements';
+import { styles } from './../utils/style';
 
 const  GameScreen = ({ route } : any) => {
 
@@ -33,7 +34,7 @@ const  GameScreen = ({ route } : any) => {
 
   return(
     <View style={styles.container}>
-      <Text style={styles.title}>{mode}</Text>
+      <Text style={styles.gameScreenTitle}>{mode}</Text>
       <View style={styles.questionContainer}>
         <Text style={styles.text}>{questionsForMode.length > 0 ? questionsForMode[0].questionStatement : "Aucune question disponible"}</Text>
       </View>
@@ -58,30 +59,5 @@ const  GameScreen = ({ route } : any) => {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  questionContainer: {
-    position: 'absolute',
-    top: 250,
-    height: 400,
-    width: 300,
-    backgroundColor: 'black'
-  },
-  title: {
-    top: 100,
-    fontWeight: 'bold', 
-    fontSize: 30,
-  },
-  text: {
-    color: 'white',
-    fontSize: 25
-  }
-})
 
 export default GameScreen;

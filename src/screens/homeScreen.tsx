@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { routes } from "../utils/routes";
+import { styles } from './../utils/style';
 
 const HomeScreen = ({ navigation } : any) => {
 
@@ -12,7 +13,7 @@ const HomeScreen = ({ navigation } : any) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>On se la colle ouuuuuu ?</Text>
+            <Text style={styles.appTitle}>On se la colle ouuuuuu ?</Text>
             <Button
                 title="Jouez !"
                 buttonStyle={{
@@ -34,19 +35,5 @@ const HomeScreen = ({ navigation } : any) => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: '#fff',
-    },
-    title: {
-      top: 200,
-      fontWeight: 'bold', 
-      fontSize: 30,
-    }
-})
 
 export default HomeScreen;
