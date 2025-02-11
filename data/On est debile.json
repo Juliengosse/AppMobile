@@ -1,0 +1,16 @@
+[
+    {
+        "text" : "Ceux qui ont déjà sniffe du popers boivent 3 gorgées",
+        "categorie" : "normal",
+        "joueur" : false,
+        "reponse": false,
+        "ifReponse": ""
+    },
+    {
+        "text" : "Les connard qui ont l’habitude de dire « j' peux te prendre un croc » quand quelqu’un déballe un sandwich vous buvez 2 gorgées",
+        "categorie" : "normal",
+        "joueur" : false,
+        "reponse": false,
+        "ifReponse": ""
+    }
+]

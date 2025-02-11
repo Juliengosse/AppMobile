@@ -1,0 +1,39 @@
+[
+    {
+        "text" : "Boit 1 gorgés",
+        "categorie" : "normal",
+        "joueur" : true,
+        "reponse": false,
+        "ifReponse": ""
+    },
+    {
+        "text" : "Boit 2 gorgés",
+        "categorie" : "normal",
+        "joueur" : true,
+        "reponse": false,
+        "ifReponse": ""
+    },
+    {
+        "text" : "Boit 3 gorgés",
+        "categorie" : "normal",
+        "joueur" : true,
+        "reponse": false,
+        "ifReponse": ""
+    },
+    {
+        "text" : "Boit 4 gorgés",
+        "categorie" : "normal",
+        "joueur" : true,
+        "reponse": false,
+        "ifReponse": ""
+    },
+    {
+        "text" : "Boit 5 gorgés",
+        "categorie" : "normal",
+        "joueur" : true,
+        "reponse": false,
+        "ifReponse": ""
+    }
+]
+
+

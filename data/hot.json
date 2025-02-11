@@ -1,0 +1,16 @@
+[
+    {
+        "text" : "Bois 4 gorgées si tu as déjà embrasse sur la bouche une personne du meme sexe",
+        "categorie" : "normal",
+        "joueur" : false,
+        "reponse": false,
+        "ifReponse": ""
+    },
+    {
+        "text" : "Bois 3 gorgées si tu as déjà re coucher avec un ou une ex",
+        "categorie" : "normal",
+        "joueur" : false,
+        "reponse": false,
+        "ifReponse": ""
+    }
+]
